@@ -1,0 +1,12 @@
+{
+  "applinks": {
+    "details": [
+      {
+        "appIDs": ["Q5L5L7NRTU.pt.clubesracket.clubesRacketMobile"],
+        "components": [
+          { "/": "/join/*", "comment": "Convites de professores" }
+        ]
+      }
+    ]
+  }
+}
