@@ -140,3 +140,83 @@ footer { display: flex; justify-content: space-between; align-items: center; gap
   .legal { padding-inline: 20px; }.legal-grid { grid-template-columns: 1fr; }.legal-grid article { min-height: auto; }
 }
 @media (max-width: 420px) { h1 { font-size: 69px; }.hero-intro { font-size: 17px; }.stage-top { font-size: 8px; }.screen { transform: scale(.92); transform-origin: center; }.screen-athlete { transform-origin: center; }.story[data-active="0"] .screen-agenda, .story[data-active="1"] .screen-athlete, .story[data-active="2"] .screen-money, .story[data-active="3"] .screen-invite { transform: scale(.94); }.story-step h2 { font-size: 45px; } }
+
+/* Compact phones: keep the story legible and give every section a clean reading lane. */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .site-header { position: fixed; padding: 14px 16px; background: rgba(9,11,13,.88); backdrop-filter: blur(14px); }
+  .site-header .brand { font-size: 12px; }
+  .brand-mark { width: 22px; height: 22px; }
+  .header-cta { min-height: 44px; display: inline-flex; align-items: center; font-size: 9px; }
+
+  .hero { min-height: 760px; }
+  .hero-copy { width: 100%; padding: 142px 20px 150px; }
+  .kicker { max-width: 280px; font-size: 10px; }
+  h1 { max-width: 340px; margin: 22px 0 22px; font-size: clamp(58px, 18vw, 78px); line-height: .84; }
+  .hero-intro { max-width: 320px; font-size: 16px; line-height: 1.4; }
+  .round-link { margin-top: 30px; font-size: 10px; }
+  .hero-court { inset: 40% -60% 7% 7%; opacity: .8; transform: perspective(700px) rotateY(-10deg) rotateX(57deg) rotateZ(-8deg); }
+  .hero-ball { top: 39%; left: 62%; width: 122px; }
+  .hero-meta { bottom: 18px; font-size: 8px; }
+  .hero-meta span:last-child { margin-left: auto; }
+
+  .statement { padding-top: 82px; padding-bottom: 82px; }
+  .statement h2, .manifesto h2, .outcome-copy h2, .contact h2 { font-size: clamp(42px, 13vw, 62px); line-height: .92; }
+  .statement-note { font-size: 15px; line-height: 1.45; }
+
+  .story { min-height: 440vh; }
+  .story-stage { height: 100svh; min-height: 650px; }
+  .stage-top { top: 16px; left: 16px; right: 16px; grid-template-columns: 30px 1fr 72px; font-size: 8px; }
+  .court-world { inset: 14% 14px 43%; border-radius: 16px; }
+  .world-lines { inset: 10% 9%; }
+  .racket-shape { width: 190px; right: -20%; bottom: -19%; border-width: 7px; }
+  .travel-ball { width: 44px; }
+  .screen { left: 24px !important; right: 24px !important; width: auto; padding: 15px; border-radius: 14px; }
+  .screen-agenda, .screen-money { top: 20%; }
+  .screen-athlete, .screen-invite { top: 20%; bottom: auto; }
+  .screen p { margin-bottom: 11px; font-size: 8px; }
+  .screen strong { font-size: 21px; }
+  .screen-money > strong { font-size: 34px; }
+  .agenda-list { margin-top: 11px; }
+  .agenda-list > div { padding: 8px 0; gap: 9px; }
+  .agenda-list span { font-size: 11px; }
+  .agenda-list small { font-size: 9px; }
+  .agenda-list b { font-size: 11px; }
+  .screen-agenda em { margin-top: 10px; font-size: 9px; }
+  .athlete-stats { margin-top: 13px; }
+  .athlete-stats span { padding: 8px; font-size: 9px; }
+  .athlete-stats b { font-size: 16px; }
+  .athlete-message { margin-top: 11px; padding: 9px; font-size: 10px; }
+  .story-copy { left: 16px; width: calc(100% - 32px); }
+  .story-step { min-height: 100svh; justify-content: flex-end; padding: 0 4px 24px; }
+  .story-step h2 { max-width: 340px; margin: 14px 0; font-size: clamp(39px, 12.5vw, 52px); line-height: .9; }
+  .story-step > p:last-child { max-width: 330px; margin-bottom: 0; font-size: 14px; line-height: 1.4; }
+
+  .manifesto { padding-top: 84px; padding-bottom: 42px; }
+  .manifesto-main { margin-top: 54px; gap: 22px; }
+  .manifesto-main > p { font-size: 16px; }
+  .discipline-row { margin-top: 70px; padding-block: 15px; font-size: 16px; gap: 12px; }
+  .outcomes { padding-top: 84px; padding-bottom: 84px; }
+  .outcome-list article { grid-template-columns: 28px minmax(0,1fr) 18px; gap: 10px; padding: 23px 0; }
+  .outcome-list h3 { font-size: 22px; line-height: 1.05; }
+  .outcome-list p { font-size: 14px; line-height: 1.4; }
+  .closing { min-height: 680px; padding-inline: 20px; }
+  .closing h2 { max-width: 330px; font-size: clamp(58px, 18vw, 82px); }
+  .closing-court { inset: 25% -22% 25%; }
+  .closing-ball { width: 220px; right: -28%; top: 50%; }
+  .contact { padding-top: 84px; padding-bottom: 84px; }
+  .contact label { margin-bottom: 22px; }
+  .contact input, .contact select { font-size: 18px; }
+  .contact .button { width: 100%; }
+  .legal-grid article { padding: 20px; }
+  footer { gap: 12px; font-size: 9px; }
+}
+
+@media (max-width: 360px) {
+  .header-cta { max-width: 102px; text-align: right; line-height: 1.1; }
+  h1 { font-size: 56px; }
+  .hero { min-height: 720px; }
+  .story-stage { min-height: 620px; }
+  .screen { left: 18px !important; right: 18px !important; }
+  .story-step h2 { font-size: 37px; }
+}
